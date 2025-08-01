@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class AuthLayout extends Component
+class Header extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class AuthLayout extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('layouts.auth');
+        return view('components.header');
     }
 }
