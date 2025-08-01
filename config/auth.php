@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'discord' => [
+            'driver' => 'session',
+            'provider' => 'discord_users',
+        ],
     ],
 
     /*
@@ -63,6 +68,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+
+        'discord_users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\DiscordUser::class,
         ],
 
         // 'users' => [
