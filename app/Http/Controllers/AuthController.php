@@ -11,6 +11,10 @@ use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
+    public function store() {
+        return view('store');
+    }
+
     public function loginWithDiscord() {
         return view('auth.login');
     }

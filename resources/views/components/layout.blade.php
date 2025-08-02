@@ -49,16 +49,16 @@
 </head>
 <body class="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
     <!-- Header -->
-    @include('components.ComponentsHeader')
-
+    @include('components-header')
+    
     <!-- Main Content -->
     <main>
         @yield('content')
     </main>
     
     <!-- Footer -->
-    @include('components.componentsFooter')
-
+    @include('components-footer')
+    
     @stack('scripts')
 </body>
 </html>

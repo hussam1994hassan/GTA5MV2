@@ -19,15 +19,19 @@ use Illuminate\Support\Facades\Route;
 Route::controller(AuthController::class)->middleware('guest:discord')->group(function () {
     Route::get('/login-with-discord', 'loginWithDiscord')->name('loginWithDiscord');
     Route::get('/discord/callback', 'discordCallback')->name('discordCallback');
+    Route::get('/store', 'store')->name('store');
+    
 });
 
 // Auth Routes
 Route::controller(HomeController::class)->middleware('auth:discord')->group(function () {
-    Route::get('/home', 'home')->name('home');
+    Route::get('/profile', 'profile')->name('profile');
     Route::get('/logout' , 'logout')->name('logout');
+    
 });
 
 // ReactJS Routes
 Route::get('/{path?}', function () {
     return view('welcome');
+    
 })->where('path', '(.*)');
